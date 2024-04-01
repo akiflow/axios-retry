@@ -1,6 +1,7 @@
 {
   "name": "axios-retry",
   "version": "4.1.1",
+  "private": true,
   "author": "Rubén Norte <ruben.norte@softonic.com>",
   "description": "Axios plugin that intercepts failed requests and retries them whenever posible.",
   "license": "Apache-2.0",
