@@ -55,10 +55,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/softonic/axios-retry.git"
+    "url": "git+https://github.com/akiflow/axios-retry.git"
   },
   "bugs": {
-    "url": "https://github.com/softonic/axios-retry/issues"
+    "url": "https://github.com/akiflow/axios-retry/issues"
   },
   "types": "dist/cjs/index.d.ts",
   "main": "dist/cjs/index.js",
