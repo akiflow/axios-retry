@@ -226,16 +226,16 @@ function abortableDelay(
       setTimeout(() => resolve(axiosInstance(config)), delay);
     });
   }
-  if (abortSignal.aborted) {
-    return axiosInstance(config);
-  }
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
+    if (abortSignal.aborted) {
+      reject(abortSignal.reason);
+    }
     const timeout = setTimeout(() => {
       resolve(axiosInstance(config));
     }, delay);
     abortSignal.addEventListener('abort', () => {
       clearTimeout(timeout);
-      resolve(axiosInstance(config));
+      reject(abortSignal.reason);
     });
   });
 }
